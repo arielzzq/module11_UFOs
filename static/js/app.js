@@ -41,7 +41,6 @@ function updateFilters() {
     // 5. If a filter value was entered then add that filterId and value
     if(elementvalue){
         filters[filterid] = elementvalue;
-        console.log(filters)
     }
     // to the filters list. Otherwise, clear that filter from the filters object.
     else{
@@ -53,15 +52,30 @@ function updateFilters() {
   }
   
   // 7. Use this function to filter the table when data is entered.
-  function filterTable() {
+function filterTable() {
   
     // 8. Set the filtered data to the tableData.
-    let filteredData = tableData
+    let filteredData = tableData;
+    console.log(filteredData);
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    for (var i = 0; i < filters.length; i++){
-        console.log(filters[i]);
+    for (var filterid in filters){
+        if (filterid === "state"){
+            filteredData = filteredData.filter(row => row.state === filters[filterid]);
+        }
+        if (filterid === "city"){
+            filteredData = filteredData.filter(row => row.city === filters[filterid]);
+        }
+        if (filterid === "country"){
+            filteredData = filteredData.filter(row => row.country === filters[filterid]);
+        }
+        if (filterid === "shape"){
+            filteredData = filteredData.filter(row => row.shape === filters[filterid]);
+        }
+        if (filterid === "datetime"){
+            filteredData = filteredData.filter(row => row.datetime === filters[filterid]);
+        }
     }
     
   
