@@ -6,8 +6,8 @@ The purpose of this analysis is to create a dynamic table using JavaScript and m
 
 ## Results
 
-![Filter_city]Images/Filter_city.png
-![Filter_date]Images/Filter_date.png
-![Filter_search]Images/Filter_search.png
+![Filter_city](Images/Filter_city.png)
+![Filter_date](Images/Filter_date.png)
+![Filter_search](Images/Filter_search.png)
 
 ## Summary
